@@ -18,3 +18,21 @@ $(document).bind("ready",function() {
 <input type="text" value="abcdef" id="ifield"/>
 </body>
 </html>
+
+or 
+
+<script src="caretcoord.js"></script>
+<script>
+$(document).bind("ready",function() {
+  var elm1 = document.getElementById("ifield");
+  var caret1 = new caretcoord(elm1);
+  $("#ifield").click(function() {
+    var pos = caret1.getCaretCoord();
+    console.log(pos);
+  });
+});
+</script>
+<body>
+<input type="text" value="abcdef" id="ifield"/>
+</body>
+
